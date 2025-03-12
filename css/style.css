@@ -331,53 +331,50 @@
     right: 16px;
 }
 
-.main_visual .wheel {
+.main_visual .scroll {
     position: absolute;
-    bottom: 80px;
+    bottom: 16px;
     left: 50%;
     transform: translate(-50%, 0);
-}
-
-.main_visual .wheel::before {
-    content: "";
-    position: absolute;
-    top: 48px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 2px;
-    height: 8px;
-    background: #fff;
-    border-radius: 2px;
-    animation: wheel 0.8s infinite;
-}
-
-.main_visual .wheel::after {
-    content: "";
-
-    display: block;
-    width: 32px;
-    height: 48px;
-    border: 2px solid #fff;
-    margin: 0 auto;
-    margin-top: 24px;
-}
-
-.main_visual .wheel span {
+    z-index: 3;
     text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 2px;
     color: #fff;
 }
 
-@keyframes wheel {
+.main_visual .scroll::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    width: 32px;
+    height: 48px;
+    border: 2px solid #fff;
+    border-radius: 24px;
+}
+
+.main_visual .scroll::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 2px;
+    height: 8px;
+    background: #fff;
+    animation: scroll 0.8s infinite;
+}
+
+@keyframes scroll {
     0% {
         transform: translate(-50%, 0);
     }
 
     100% {
-        transform: translate(-50%, -8px);
+        transform: translate(-50%, 4px);
     }
 }
+
 
 @media (max-width:768px) {
     .main_visual {
@@ -492,53 +489,50 @@
         right: 16px;
     }
 
-    .main_visual .wheel {
+    .main_visual .scroll {
         position: absolute;
-        bottom: 80px;
+        bottom: 16px;
         left: 50%;
         transform: translate(-50%, 0);
-    }
-
-    .main_visual .wheel::before {
-        content: "";
-        position: absolute;
-        top: 48px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 2px;
-        height: 8px;
-        background: #fff;
-        border-radius: 2px;
-        animation: wheel 0.8s infinite;
-    }
-
-    .main_visual .wheel::after {
-        content: "";
-
-        display: block;
-        width: 32px;
-        height: 48px;
-        border: 2px solid #fff;
-        margin: 0 auto;
-        margin-top: 24px;
-    }
-
-    .main_visual .wheel span {
+        z-index: 3;
         text-transform: uppercase;
-        font-size: 12px;
-        letter-spacing: 2px;
         color: #fff;
     }
 
-    @keyframes wheel {
+    .main_visual .scroll::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translate(-50%, -25%);
+        width: 32px;
+        height: 48px;
+        border: 2px solid #fff;
+        border-radius: 24px;
+    }
+
+    .main_visual .scroll::after {
+        content: "";
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        width: 2px;
+        height: 8px;
+        background: #fff;
+        animation: scroll 0.8s infinite;
+    }
+
+    @keyframes scroll {
         0% {
             transform: translate(-50%, 0);
         }
 
         100% {
-            transform: translate(-50%, -8px);
+            transform: translate(-50%, 4px);
         }
     }
+
 }
 
 .main_content .title h2 {
