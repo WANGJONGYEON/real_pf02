@@ -116,13 +116,16 @@ $(function () {
 
 $(function () {
     $('#bgndVideo').YTPlayer({
-        videoURL: 'https://youtu.be/fROmO9sy3DU',
+        videoURL: 'fROmO9sy3DU',
         containment: '.main_movie',
         showControls: false,
         playOnlyIfVisible: true,
 
 
     });
+    setTimeout(function () {
+        $('#bgndVideo').YTPPlay();
+    }, 500);
 
     $('.main_movie .control .play').on('click', function () {
         $('#bgndVideo').YTPPlay();
@@ -134,6 +137,8 @@ $(function () {
         $('#bgndVideo').YTPFullscreen();
     });
 })
+
+
 
 $(function () {
     $('.to_top').on('click', function () {
