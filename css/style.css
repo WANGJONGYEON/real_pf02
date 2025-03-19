@@ -1170,7 +1170,12 @@
 }
 
 .main_movie {
+
+    width: 100%;
     height: 640px;
+    position: relative;
+    overflow: hidden;
+    /* 필요할 수도 있음 */
 }
 
 .main_movie .title h2 {
@@ -1188,6 +1193,8 @@
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 40px;
 }
+
+.main_movie {}
 
 @media (max-width:768px) {
     .main_movie {
